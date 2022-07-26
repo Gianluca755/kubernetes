@@ -245,7 +245,7 @@ kubectl apply -f labs/productionizing/specs/configurable
 Try the app and you'll see it fails after 3 refreshes and never comes back online. There's a `/healthz` endpoint you can use to check that. Your goals are:
 
 - run 5 replicas and ensure traffic only gets sent to healthy Pods
-- restart Pods if the app in the container fails
+- restart container if the app fails
 - add an HPA as a backup, scaling up to 10 if Pods use more than 50% CPU.
 
 This app isn't CPU intensive so you won't be able to trigger the HPA by making HTTP calls. How else can you test the HPA scales up and down correctly? 
