@@ -40,7 +40,8 @@ scrape_configs:
 
 This Pod spec would be included in the scrape configuration:
 
-```apiVersion: v1
+```
+apiVersion: v1
 kind: Pod
 metadata:
   name: whoami
@@ -72,7 +73,7 @@ kubectl apply -f labs/monitoring/specs/fulfilment-processor
 kubectl get all -l kubernetes.courselabs.co=monitoring
 ```
 
-> When the Pod is ready, browse to the metrics endpoint on http://localhost:9110/metrics or http://localhost:30910/metrics 
+> When the Pod is ready, browse to the metrics endpoint on http://localhost:9110/metrics or http://localhost:30011/metrics 
 
 This is not a web app - it runs an HTTP server purely to provide the metrics. Refresh the page and you'll see some of the numbers changing:
 
